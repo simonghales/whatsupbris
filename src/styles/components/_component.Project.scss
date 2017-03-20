@@ -1,0 +1,22 @@
+.Project
+{
+
+}
+
+.Project__columns
+{
+  display:        flex;
+  flex-direction: row;
+
+  .ProjectColumn
+  {
+    margin-right: 30px;
+
+    &:last-of-type
+    {
+      margin-right: 0;
+    }
+
+  }
+
+}

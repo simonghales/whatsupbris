@@ -1,0 +1,99 @@
+$desktop-Right_Arrow: -0px -0px 27px 44px;
+$desktop-Logo_White: -0px -44px 174px 44px;
+$desktop-Left_Arrow: -0px -88px 27px 44px;
+$desktop-AppStore_Bttn_White: -0px -132px 139px 44px;
+$desktop-Logo_Pink: -0px -176px 203px 52px;
+$desktop-AppStore_Bttn: -0px -228px 207px 64px;
+$desktop-Play_Bttn: -0px -292px 88px 88px;
+$desktop-Img_Slide3: -0px -380px 486px 359px;
+$desktop-Img_Slide1: -0px -739px 406px 553px;
+$desktop-Img_Phone_Landing: -0px -1292px 278px 564px;
+$desktop-Img_Slide4: -0px -1856px 444px 587px;
+$desktop-Img_Slide2: -0px -2443px 716px 699px;
+$mobile-Logo_Pink: -0px -0px 104px 29px;
+$mobile-Logo_White: -0px -29px 165px 43px;
+$mobile-AppStore_Bttn: -0px -72px 139px 44px;
+$mobile-AppStore_Bttn_White: -0px -116px 139px 44px;
+$mobile-Play_Bttn: -0px -160px 53px 53px;
+$mobile-Img_Slide3: -0px -213px 339px 252px;
+$mobile-Img_Slide2: -0px -465px 309px 264px;
+$mobile-Img_Slide4: -0px -729px 234px 270px;
+$mobile-Img_Phone_Landing: -0px -999px 136px 274px;
+$mobile-Img_Slide1: -0px -1273px 205px 279px;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite, $display: block) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+
+.spritesheet-desktop {
+  background-image: url('./assets/spritesheet/spritesheet-desktop.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+  .spritesheet-desktop {
+    background-image: url('./assets/spritesheet/spritesheet-desktop@2x.png');
+    background-size: 716px 3142px;
+  }
+}
+
+
+.spritesheet-mobile {
+  background-image: url('./assets/spritesheet/spritesheet-mobile.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+  .spritesheet-mobile {
+    background-image: url('./assets/spritesheet/spritesheet-mobile@2x.png');
+    background-size: 339px 1552px;
+  }
+}
+
+
+
+@mixin sh-desktop {
+
+  background-image: url('./assets/spritesheet/spritesheet-desktop.png');
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    background-image: url('./assets/spritesheet/spritesheet-desktop@2x.png');
+    background-size: 716px 3142px;
+  }
+}
+
+
+@mixin sh-mobile {
+
+  background-image: url('./assets/spritesheet/spritesheet-mobile.png');
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    background-image: url('./assets/spritesheet/spritesheet-mobile@2x.png');
+    background-size: 339px 1552px;
+  }
+}
+

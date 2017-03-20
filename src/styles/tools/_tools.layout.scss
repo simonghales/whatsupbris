@@ -1,0 +1,13 @@
+@mixin layoutCentred
+{
+  padding-left:  20px;
+  padding-right: 20px;
+  max-width:     1046px;
+  margin:        0 auto;
+}
+
+@mixin layoutPaddedSides
+{
+  padding-left:  55px;
+  padding-right: 55px;
+}

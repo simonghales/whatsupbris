@@ -1,0 +1,28 @@
+.ProjectCard
+{
+  background-color: #ffffff;
+  border:           1px solid #f0f0f0;
+  border-radius:    3px;
+  cursor:           pointer;
+  padding:          15px;
+
+  &:hover
+  {
+    border-color: #e0e0e0;
+  }
+
+}
+
+.ProjectCard__title
+{
+  color:     $color__dark;
+  font-size: .9rem;
+}
+
+.ProjectCard__description
+{
+  color:       $color__medium;
+  font-size:   .9rem;
+  line-height: 1.15rem;
+  margin-top:  7px;
+}

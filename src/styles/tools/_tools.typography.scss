@@ -1,0 +1,20 @@
+@mixin headingFont
+{
+  font-family: Lato, Roboto, Helvetica, Arial, sans-serif;
+}
+
+@mixin siteHeading
+{
+  @include headingFont;
+  color:       $color__primary;
+  font-weight: 700;
+  font-style:  italic;
+  font-size:   1.2rem;
+}
+
+@mixin mediumHeading
+{
+  @include headingFont;
+  font-size: 1rem;
+  font-weight: 700;
+}

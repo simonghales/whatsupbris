@@ -1,0 +1,50 @@
+.MainSidebar
+{
+  width: 280px;
+
+  .MainConfig
+  {
+    margin-top: 30px;
+  }
+
+}
+
+.MainSidebar__nav
+{
+
+}
+
+.MainSidebar__linkWrapper
+{
+  border-radius: 4px;
+  margin-top:    4px;
+  height:        41px;
+  transition:    background-color 250ms ease;
+
+  &:first-of-type
+  {
+    margin-top: 0;
+  }
+
+  &:hover,
+  &.MainSidebar__linkWrapper--selected
+  {
+    background-color: #e6eaf5;
+  }
+
+}
+
+.MainSidebar__link
+{
+  color:       #a7b1c7;
+  line-height: 41px;
+  display:     block;
+  padding:     0 12px;
+
+  .MainSidebar__linkWrapper--selected &
+  {
+    color:       #565d6d;
+    font-weight: 500;
+  }
+
+}

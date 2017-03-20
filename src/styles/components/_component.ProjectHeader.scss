@@ -1,0 +1,57 @@
+.ProjectHeader
+{
+  display:         flex;
+  justify-content: space-between;
+  margin:          30px 0 20px 0;
+}
+
+.ProjectHeader__title
+{
+  @include mediumHeading;
+}
+
+.ProjectHeader__options
+{
+
+}
+
+.ProjectHeader__modeTabs
+{
+  @include clearfix;
+  position: relative;
+  top:      -7px;
+}
+
+.ProjectHeader__modeTabs__tab
+{
+  @include resetButton;
+  @include headingFont;
+  font-weight:      700;
+  float:            left;
+  font-size:        .8rem;
+  margin-right:     5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border:           1px solid rgba(0, 0, 0, 0.05);
+  border-radius:    2px;
+  color:            $color__medium;
+  padding:          6px 12px;
+
+  &:hover
+  {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &.ProjectHeader__modeTabs__tab--active
+  {
+    background-color: #ffffff;
+    border-color:     #ffffff;
+    box-shadow:       0 2px 8px rgba(0, 0, 0, 0.1);
+    color:            $color__dark;
+  }
+
+  &:last-of-type
+  {
+    margin-right: 0;
+  }
+
+}

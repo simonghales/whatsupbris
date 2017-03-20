@@ -1,0 +1,21 @@
+.MainResults
+{
+
+}
+
+.MainResults__events
+{
+  margin-bottom: 100px;
+
+  .EventPreview
+  {
+    margin-top: 30px;
+
+    &:first-of-type
+    {
+      margin-top: 0;
+    }
+
+  }
+
+}

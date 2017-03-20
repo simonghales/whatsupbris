@@ -1,0 +1,50 @@
+@mixin resetButton
+{
+  background: none;
+  border:     0;
+  cursor:     pointer;
+  font-size:  inherit;
+  padding:    0;
+
+  &:focus
+  {
+    outline: none;
+  }
+}
+
+@mixin mediumSizeButton
+{
+  border-radius: 3px;
+  font-weight:   700;
+  font-size:     .8rem;
+  padding:       6px 8px;
+  transition:    background-color 250ms ease, color 250ms ease, transform 250ms ease;
+
+  &:active
+  {
+    transform: translateY(2px);
+  }
+
+}
+
+@mixin submitButton
+{
+  @include resetButton;
+  @include mediumSizeButton;
+  background-color: $color__primary;
+  color:            #ffffff;
+}
+
+@mixin cancelButton
+{
+  @include resetButton;
+  @include mediumSizeButton;
+  color: $color__medium;
+
+  &:hover
+  {
+    background-color: $color__faintShade;
+    color:            $color__dark;
+  }
+
+}
